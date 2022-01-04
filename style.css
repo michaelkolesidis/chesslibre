@@ -1,0 +1,45 @@
+* {
+    font-family: sans-serif;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background: rgb(246, 246, 246);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+}
+
+#chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 4rem);
+    grid-template-rows: repeat(8, 4rem);}
+
+
+.square {
+    height: 4rem;
+    width: 4rem;
+    text-align:center
+}
+
+.square img {
+    /* margin: auto; */
+    height: 4rem;
+    width: 4rem;
+}
+
+ .white {
+     background-color: rgb(240,217,181);
+ }
+
+.black {
+    background-color: rgb(181,136,99);
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>chesslibre</title>
+  </head>
+  <body>
+    <h1><img src="./logo.svg" alt="chesslibre logo" /> chesslibre</h1>
+
+    <div id="chessboard">
+      <div class="square white"><img src="./rook_black.svg" alt="" /></div>
+      <div class="square black"><img src="./bishop_black.svg" alt="" /></div>
+      <div class="square white"><img src="./knight_black.svg" alt="" /></div>
+      <div class="square black"><img src="./queen_black.svg" alt="" /></div>
+      <div class="square white"><img src="./king_black.svg" alt="king black" /></div>
+      <div class="square black"><img src="./knight_black.svg" alt="" /></div>
+      <div class="square white"><img src="./bishop_black.svg" alt="" /></div>
+      <div class="square black"><img src="./rook_black.svg" alt="" /></div>
+
+      <div class="square black"><img src="./pawn_black.svg" alt="" /></div>
+      <div class="square white"><img src="./pawn_black.svg" alt="" /></div>
+      <div class="square black"><img src="./pawn_black.svg" alt="" /></div>
+      <div class="square white"><img src="./pawn_black.svg" alt="" /></div>
+      <div class="square black"><img src="./pawn_black.svg" alt="" /></div>
+      <div class="square white"><img src="./pawn_black.svg" alt="" /></div>
+      <div class="square black"><img src="./pawn_black.svg" alt="" /></div>
+      <div  class="square white"><img ondrop="drop(event)" draggable="true" ondragstart="drag(event)" src="./pawn_black.svg" alt="" /></div>
+
+      <div class="square white"></div>
+      <div class="square black"></div>
+      <div class="square white"></div>
+      <div class="square black"></div>
+      <div class="square white"></div>
+      <div class="square black"></div>
+      <div class="square white"></div>
+      <div ondrop="drop(event)" ondragover="allowDrop(event)" class="square black"></div>
+
+      <div class="square black"></div>
+      <div class="square white"></div>
+      <div class="square black"></div>
+      <div class="square white"></div>
+      <div class="square black"></div>
+      <div class="square white"></div>
+      <div class="square black"></div>
+      <div class="square white"></div>
+
+      <div class="square white"></div>
+      <div class="square black"></div>
+      <div class="square white"></div>
+      <div class="square black"></div>
+      <div class="square white"></div>
+      <div class="square black"></div>
+      <div class="square white"></div>
+      <div class="square black"></div>
+
+      <div class="square black"></div>
+      <div class="square white"></div>
+      <div class="square black"></div>
+      <div class="square white"></div>
+      <div class="square black"></div>
+      <div class="square white"></div>
+      <div class="square black"></div>
+      <div class="square white"></div>
+
+      <div class="square white">
+        <img src="./pawn_white.svg" alt="pawn white" />
+      </div>
+      <div class="square black">
+        <img src="./pawn_white.svg" alt="pawn white" />
+      </div>
+      <div class="square white">
+        <img src="./pawn_white.svg" alt="pawn white" />
+      </div>
+      <div class="square black">
+        <img src="./pawn_white.svg" alt="pawn white" />
+      </div>
+      <div class="square white">
+        <img src="./pawn_white.svg" alt="pawn white" />
+      </div>
+      <div class="square black">
+        <img src="./pawn_white.svg" alt="pawn white" />
+      </div>
+      <div class="square white">
+        <img src="./pawn_white.svg" alt="pawn white" />
+      </div>
+      <div class="square black">
+        <img src="./pawn_white.svg" alt="pawn white" />
+      </div>
+
+      <div class="square black"><img src="./rook_white.svg" alt="" /></div>
+      <div class="square white"><img src="./bishop_white.svg" alt="" /></div>
+      <div class="square black"><img src="./knight_white.svg" alt="" /></div>
+      <div class="square white"><img src="./queen_white.svg" alt="" /></div>
+      <div class="square black">
+        <img src="./king_white.svg" alt="king black" />
+      </div>
+      <div class="square white"><img src="./knight_white.svg" alt="" /></div>
+      <div class="square black"><img src="./bishop_white.svg" alt="" /></div>
+      <div class="square white"><img src="./rook_white.svg" alt="" /></div>
+    </div>
+
+    <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+      
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+      
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+      
+      </script>
+
+
+  </body>
+</html>
+
+<!-- <div id="chessboard">
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+
+    
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+
+    
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+
+    
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+
+    
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+
+   
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+
+ 
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+
+    
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+</div> -->
